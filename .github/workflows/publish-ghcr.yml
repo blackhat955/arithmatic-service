@@ -8,8 +8,13 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
+            - name: npm install
+              run: npm ci
+            - name: run the unit tests
+              run : npm test
             - name: Build and push the image
               run: |
                 docker login --username jeetkatariya --password ${{secrets.ACCESS_TOKEN}} ghcr.io
                 docker build -t ghcr.io/jeetkatariya/arithmetic-service:latest --file Dockerfile .  
                 docker push ghcr.io/jeetkatariya/arithmetic-service:latest 
+git
