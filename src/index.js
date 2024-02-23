@@ -5,6 +5,7 @@ const app = express();
 app.use(cors());
 const port = 3000;
 
+// wowrking with the routes for  here 
 app.get('/', (req, res) => {
     res.send('Arithetic Service - Hello World');
 });
