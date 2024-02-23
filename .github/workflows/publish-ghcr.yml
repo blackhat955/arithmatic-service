@@ -14,6 +14,6 @@ jobs:
               run : npm test
             - name: Build and push the image              
               run: |
-                docker login --username jeetkatariya --password ${{secrets.ACCESS_TOKEN}} ghcr.io
-                docker build -t ghcr.io/jeetkatariya/arithmetic-service:latest --file Dockerfile .
-                docker push ghcr.io/jeetkatariya/arithmetic-service:latest
+                docker login --username blackhat955 --password ${{secrets.ACCESS_TOKEN}} ghcr.io
+                docker build -t ghcr.io/blackhat955/arithmetic-service:latest --file Dockerfile .
+                docker push ghcr.io/blackhat955/arithmetic-service:latest
