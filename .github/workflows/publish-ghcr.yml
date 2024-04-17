@@ -14,7 +14,7 @@ jobs:
         run: npm test
       - name: Publish the image to GitHub Container Registry
         run: |
-          docker login --username blackhat955 --password ${{ secrets.GITHUB_TOKEN }} ghcr.io
+          docker login --username blackhat955 --password ${{ secrets.ACCESS_TOKEN }} ghcr.io
           docker build -t ghcr.io/blackhat955/arithmetic-service:1 --file Dockerfile .
           docker push ghcr.io/blackhat955/arithmetic-service:1
           
