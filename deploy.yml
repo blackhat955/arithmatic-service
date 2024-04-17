@@ -27,7 +27,7 @@ metadata:
 spec:
   selector:
     app: arithmetic-service
-  type: NodePort
+  type: LoadBalancer
   ports:
     - protocol: TCP
       port: 80
